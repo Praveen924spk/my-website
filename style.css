@@ -1705,31 +1705,27 @@ section{
 }
 
 .nav-links{
-
     position:fixed;
-
     top:80px;
     right:-100%;
-
-    width:270px;
+    width:280px;
     height:calc(100vh - 80px);
 
     background:#0f172a;
 
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
     align-items:center;
-
+    justify-content:flex-start;
     gap:30px;
 
-    padding-top:40px;
+    padding:40px 20px;
 
-    transition:.4s ease;
+    transition:right .35s ease;
 
-    border-left:1px solid rgba(255,255,255,.08);
-
+    z-index:999;
 }
+
 
 .nav-links.active{
     right:0;

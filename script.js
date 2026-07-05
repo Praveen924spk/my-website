@@ -12,20 +12,33 @@ window.addEventListener("load", () => {
 // =========================
 // MOBILE MENU
 // =========================
+
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
+const menuIcon = document.querySelector(".menu-btn i");
 
 menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+        menuIcon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+        menuIcon.classList.replace("fa-xmark", "fa-bars");
+    }
+
 });
 
-// close menu on click
 document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
-    });
-});
 
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuIcon.classList.replace("fa-xmark", "fa-bars");
+
+    });
+
+});
 // =========================
 // SMOOTH ACTIVE NAV LINK
 // =========================
@@ -129,3 +142,4 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
     });
 
 });
+
