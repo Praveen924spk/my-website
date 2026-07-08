@@ -108,3 +108,56 @@ AOS.init({
     duration: 1000,
     once: true
 });
+// =========================================
+// CERTIFICATE POPUP
+// =========================================
+
+const popup = document.getElementById("popup");
+const popupImage = document.getElementById("popupImage");
+const closePopup = document.getElementById("closePopup");
+
+const certificates = document.querySelectorAll(".certificate-card img");
+
+certificates.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        popupImage.src = img.src;
+
+        popup.classList.add("show");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+function closeCertificatePopup(){
+
+    popup.classList.remove("show");
+
+    document.body.style.overflow = "auto";
+
+}
+
+closePopup.addEventListener("click", closeCertificatePopup);
+
+popup.addEventListener("click",(e)=>{
+
+    if(e.target===popup){
+
+        closeCertificatePopup();
+
+    }
+
+});
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        closeCertificatePopup();
+
+    }
+
+});

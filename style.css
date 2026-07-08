@@ -1736,3 +1736,68 @@ section{
 }
 
 }
+
+/* ========================================= */
+/* CERTIFICATE POPUP ANIMATION */
+/* ========================================= */
+
+#popup{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.85);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .35s ease;
+
+    z-index: 99999;
+}
+
+#popup.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup img{
+    width: auto;
+    max-width: 90%;
+    max-height: 90vh;
+
+    border-radius: 18px;
+
+    transform: scale(.6);
+    opacity: 0;
+
+    transition:
+        transform .4s cubic-bezier(.175,.885,.32,1.275),
+        opacity .35s ease;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.55);
+}
+
+#popup.show img{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#closePopup{
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#closePopup:hover{
+    transform: rotate(90deg) scale(1.15);
+    color: #00bfff;
+}
