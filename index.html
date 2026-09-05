@@ -31,6 +31,29 @@
 <body>
 
 
+    <!-- PROJECT IMAGE LIGHTBOX -->
+<div id="imageLightbox" class="image-lightbox">
+
+    <button class="lightbox-close" onclick="closeLightbox()">
+        &times;
+    </button>
+
+    <button class="lightbox-prev" onclick="changeImage(-1)">
+        &#10094;
+    </button>
+
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Project Image">
+        <div id="lightboxCaption"></div>
+    </div>
+
+    <button class="lightbox-next" onclick="changeImage(1)">
+        &#10095;
+    </button>
+
+</div>
+
+
     <!-- ========================= -->
     <!-- Header -->
     <!-- ========================= -->
@@ -728,6 +751,169 @@
 
     </section>
 
+<!-- =========================================
+     PROJECT PHOTOS
+========================================= -->
+
+<section id="project-photos" class="project-photos-section">
+
+    <div class="section-title">
+        <h2>UAV Development in Action</h2>
+        <p>
+            A visual collection of UAV platforms, flight testing,
+            heavy-lift systems and development projects.
+        </p>
+    </div>
+
+
+    <div class="project-gallery">
+
+
+        <!-- 30KG LOGISTICS UAV -->
+        <div class="gallery-image">
+            <img
+                src="30kg.jpg"
+                alt="30kg Logistics UAV"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-overlay">
+                <h3>30kg Logistics UAV</h3>
+                <span>Heavy Lift UAV</span>
+            </div>
+        </div>
+
+
+        <!-- 100KG HEAVY LIFT UAV -->
+        <div class="gallery-image portrait-image">
+            <img
+                src="100g.PNG"
+                alt="100kg Heavy Lift UAV"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-overlay">
+                <h3>100kg Heavy Lift UAV</h3>
+                <span>Heavy Lift UAV</span>
+            </div>
+        </div>
+
+
+        <!-- VTOL UAV -->
+        <div class="gallery-image">
+            <img
+                src="VTOL.jpg"
+                alt="VTOL UAV Platform"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-overlay">
+                <h3>VTOL UAV Platform</h3>
+                <span>VTOL Development</span>
+            </div>
+        </div>
+
+
+        <!-- HIGH ALTITUDE SURVEILLANCE UAV -->
+        <div class="gallery-image">
+            <img
+                src="1200.jpg"
+                alt="High Altitude Surveillance UAV"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-overlay">
+                <h3>High Altitude Surveillance UAV</h3>
+                <span>Surveillance Platform</span>
+            </div>
+        </div>
+
+
+        <!-- COUNTER DRONE -->
+        <div class="gallery-image">
+            <img
+                src="counter drone.PNG"
+                alt="Counter Drone System"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-overlay">
+                <h3>Counter Drone System</h3>
+                <span>Counter-UAS</span>
+            </div>
+        </div>
+
+
+        <!-- FPV DRONE -->
+        <div class="gallery-image">
+            <img
+                src="FPV.jpg"
+                alt="FPV Drone"
+                onclick="openLightbox(this)"
+            >
+
+            <div class="gallery-overlay">
+                <h3>FPV Drone</h3>
+                <span>FPV Development</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROJECT IMAGE LIGHTBOX
+========================================= -->
+
+<div id="imageLightbox" class="image-lightbox">
+
+    <!-- CLOSE -->
+    <button
+        class="lightbox-close"
+        onclick="closeLightbox()"
+        aria-label="Close image"
+    >
+        &times;
+    </button>
+
+
+    <!-- PREVIOUS -->
+    <button
+        class="lightbox-prev"
+        onclick="changeImage(-1)"
+        aria-label="Previous image"
+    >
+        &#10094;
+    </button>
+
+
+    <!-- IMAGE -->
+    <div class="lightbox-content">
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Project Image"
+        >
+
+        <div id="lightboxCaption"></div>
+
+    </div>
+
+
+    <!-- NEXT -->
+    <button
+        class="lightbox-next"
+        onclick="changeImage(1)"
+        aria-label="Next image"
+    >
+        &#10095;
+    </button>
+
+</div>
+
     <!-- ========================= -->
     <!-- Certifications -->
     <!-- ========================= -->
@@ -751,6 +937,9 @@
                     <img src="Azure.jpg" alt="Microsoft Azure">
 
                     <h3>Microsoft Azure Fundamentals</h3>
+
+
+                    
 
                 </div>
 
